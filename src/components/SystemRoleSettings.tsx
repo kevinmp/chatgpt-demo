@@ -12,10 +12,11 @@ interface Props {
 
 export default (props: Props) => {
   let systemInputRef: HTMLTextAreaElement
+  props.setCurrentSystemRoleSettings('You are an expert business PR writer who understands multiple languages. You always respond in natural, concise, professional, American standard English.')
 
   const handleButtonClick = () => {
     props.setCurrentSystemRoleSettings(systemInputRef.value)
-    props.setSystemRoleEditing(false)
+    props.setSystemRoleEditing(true)
   }
 
   return (
